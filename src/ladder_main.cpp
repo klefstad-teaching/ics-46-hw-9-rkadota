@@ -1,9 +1,9 @@
 #include "ladder.h"
 
 void test_is_adjacent() {
-    cout << is_adjacent("Pog", "pog") << endl;
-    cout << is_adjacent("Fwg", "pog") << endl;
-    cout << is_adjacent("Dog", "Dogg") << endl;
+    cout << is_adjacent("apple", "bapple") << endl;
+    cout << is_adjacent("apple", "appleD") << endl;
+    cout << is_adjacent("apdple", "apple") << endl;
 }
 
 

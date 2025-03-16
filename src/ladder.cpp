@@ -46,16 +46,25 @@ bool is_adjacent(const string& word1, const string& word2) {
 
         int count = 0;
         int differences = 0;
+
         for (auto character: shortest) {
             if (longest[count] != character) {
+                // cout << count << endl;
+                // cout << differences << endl;
+                // cout << "Run " << longest[count] << " " << character << endl;
+                count += 2;
                 ++differences;
-                //cout << longest[count] << " " << character;
-                }
-            if (differences > 1) {return false;}
+
+            if (differences > 1) {
+                cout << differences << "FF";
+                return false;
+            }
+            continue;
+        }
             ++count;
         }
-        
-        if (differences == 0) {
+
+        if (differences == 0 || differences == 1) {
             return true;
         }
         else {return false;}
